@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Practice</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>DOM Manipulation Practice</h2>
+
+    <!-- Exercise 1: Change Text Content -->
+    <p id="text-change">This is a paragraph. Click the button to change its content.</p>
+    <button onclick="changeText()">Change Text</button>
+
+    <!-- Exercise 2: Add and Remove CSS Class -->
+    <p id="class-change">This paragraph will change its background color when the button is clicked.</p>
+    <button onclick="toggleClass()">Toggle Class</button>
+
+    <!-- Exercise 3: Append Child Element -->
+    <div id="append-child">
+        <h3>Append Child Example</h3>
+    </div>
+    <button onclick="appendChild()">Append Child</button>
+
+    <!-- Exercise 4: Remove Element -->
+    <div id="remove-element">
+        <p>This paragraph can be removed by clicking the button.</p>
+    </div>
+    <button onclick="removeElement()">Remove Element</button>
+
+    <script>
+        // Exercise 1: Change Text Content
+        function changeText() {
+            document.getElementById('text-change').textContent = 'Text changed!';
+        }
+
+        // Exercise 2: Add and Remove CSS Class
+        function toggleClass() {
+            var element = document.getElementById('class-change');
+            element.classList.toggle('highlight');
+        }
+
+        // Exercise 3: Append Child Element
+        function appendChild() {
+            var newParagraph = document.createElement('p');
+            newParagraph.textContent = 'This paragraph is appended!';
+            document.getElementById('append-child').appendChild(newParagraph);
+        }
+
+        // Exercise 4: Remove Element
+        function removeElement() {
+            var elementToRemove = document.getElementById('remove-element');
+            elementToRemove.parentNode.removeChild(elementToRemove);
+        }
+    </script>
+
+</body>
+</html>
