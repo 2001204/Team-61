@@ -1,3 +1,4 @@
+import React from "react";
 import { Alert, Col, Container, Row } from "react-bootstrap";
 
 export function AboutUs(){

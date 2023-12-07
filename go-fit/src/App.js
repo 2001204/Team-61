@@ -1,23 +1,30 @@
-import { BrowserRouter} from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { NavigationBar } from "./components/NavigationBar";
 import { Home } from "./components/Home";
-// import { Dashboard } from "./components/Dashboard";
-// import { Footer } from "./components/Footer";
+import Footer from "./footer/Footer"; 
+import { AboutUs } from "./components/AboutUs";
+import { Dashboard } from "./components/Dashboard";
+import { Programs } from "./components/Programs";
+import { ContactUs } from "./components/ContactUs";
+
+
 
 function App() {
   return (
     <BrowserRouter>
       <NavigationBar></NavigationBar>
+      
       <Home></Home>
-      {/* <Routes>
-        <Route path="/" element={<Home/>}></Route>
+      <Routes>
         <Route path="/aboutus" element={<AboutUs/>}></Route>
-        <Route path="/programs" element={<Program/>}></Route>
+        <Route path="/programs" element={<Programs/>}></Route>
         <Route path="/contactus" element={<ContactUs/>}></Route>
-        <Route path="/contactus" element={<Dashboard/>}></Route>
-        <Route path="/contactus" element={<ContactUs/>}></Route>
+        <Route path="/dashboard" element={<Dashboard/>}></Route>
         <Route path="/footer" element={<Footer/>}></Route>
-      </Routes>  */}
+        <Route path="/login" element={<login/>}></Route>
+        
+      </Routes>
+      <Footer></Footer>
     </BrowserRouter>    
   );
 }
