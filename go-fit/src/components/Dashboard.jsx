@@ -4,6 +4,12 @@ import { Sidebar } from "../subcomponents/Sidebar";
 export function Dashboard(){
 
     return (
-     <Sidebar></Sidebar>
+
+     <Sidebar>
+
+        
+     </Sidebar>
+
       );
 }
+
