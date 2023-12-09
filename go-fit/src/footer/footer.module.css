@@ -1,10 +1,13 @@
 .footer {
   background-color:gray;
   color: var(--four);
+  background-image: url(./images/img7.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .footer_image {
-  /* background-image: url(../../assets/footer.jpg); */
+
   background-size: cover;
   background-repeat: no-repeat;
   height: 30vh;
@@ -32,10 +35,12 @@
 
 .footer_content > div {
   padding: 20px;
+  color: rgb(220, 224, 11);
 }
 
 .footer_content > div:first-of-type img {
   width: 30px;
+  color: rgb(35, 140, 232);
 }
 
 .logo_holder {
@@ -47,6 +52,7 @@
 
 .footer_content > div:first-of-type > p {
   margin: 20px 0;
+  color: rgb(6, 132, 242);
 }
 
 .info {
@@ -60,7 +66,7 @@
 }
 
 .info span {
-  color: var(--one);
+  color: white;
   display: block;
   margin: 10px 0;
 }
@@ -68,19 +74,20 @@
 .footer_content > div:nth-child(2) ul li {
   cursor: pointer;
   margin-bottom: 20px;
+  color: white;
 }
 
 .footer_content > div:nth-child(2) ul li:first-of-type {
-  color: var(--white);
+  color: white;
   cursor: none;
 }
 
 .footer_content > div:nth-child(2) ul li:hover {
-  color: var(--white);
+  color: white
 }
 
 .footer_content > div:last-of-type h3 {
-  color: var(--white);
+  color: white
 }
 
 .footer_content > div:last-of-type input {
@@ -90,10 +97,11 @@
   background-color: var(--five);
   border: none;
   outline: none;
+  color: aliceblue;
 }
 
 .footer_content > div:last-of-type button {
-  background-color: var(--one);
+  background-color: yellow;
   margin-bottom: 20px;
 }
 

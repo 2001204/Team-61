@@ -2,6 +2,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image'
+import img6 from './images/developer.jpg'
 
 import pic from "./images/logo.jpg"
 
@@ -41,10 +42,14 @@ export function NavigationBar() {
                             <Nav.Link><Button >Login</Button></Nav.Link>
                         </LinkContainer>
 
-                        
+                       
                     
                     </Nav>
-
+                    <img src={img6}
+                        width="60"
+                        height="50"
+                        className="d-inline-block align-top"
+                        roundedCircle />
                     
                     
 
