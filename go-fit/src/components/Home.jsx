@@ -26,10 +26,9 @@ export function Home() {
         color: "white",
     };
     return (
-        <Container className="text-center">
+        <Container fluid>
              <div style={{ backgroundImage: `url(${background})` }}>
               
-             
             <div>
                 <Slider></Slider>
             </div><hr />

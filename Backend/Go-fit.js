@@ -1,10 +1,10 @@
 import mongoose, { Schema } from "mongoose";
 
 const GofitSchema=new Schema({
-    name:String,
+    username:String,
     email:String,
     password:String,
-    gender:String  
+    confirmpassword:String  
 });
 
 export const User=mongoose.model("UserDetail",GofitSchema);

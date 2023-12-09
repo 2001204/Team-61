@@ -1,13 +1,75 @@
-import React from "react";
+
+import React, { useState } from 'react';
 import { Row } from "react-bootstrap";
+import {Button,Image, Alert } from 'react-bootstrap'; // Import your Container component
 
 import { Card, Col, Container } from "react-bootstrap";
-import Programcards from "./Programcards";
+
+import yogapic from './images/pexels-yan-krukau-8436627(3).jpg'
+import gympic from './images/gympic.jpg'
+
 
 export function Programs() {
+    const [isHovered, setIsHovered] = useState(false);
+
+    const cardStyle = {
+        transition: 'box-shadow 0.3s ease, transform 0.3s ease',
+        boxShadow: isHovered ? '0 4px 8px rgba(0, 0, 0, 0.1)' : 'none',
+        transform: isHovered ? 'translateY(-5px)' : 'none',
+    };
+
     return (
         <Container>
-            <Programcards> </Programcards>
+            <Alert variant='success' style={{textAlign:"center"}}>
+               <h1> Programs</h1>
+            </Alert>
+            <div class="card-group mt-5 "  >
+                <div class="card me-3" style={cardStyle}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}>
+                      <Image className="card-img-top" src={yogapic} alt="Card image cap" />
+                    <div class="card-body text-center" >
+                        <h5 class="card-title" >Yoga</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <br/>
+                        <Button variant="outline-primary">Explore More...</Button>
+                    </div>
+                </div>
+                <div class="card  me-3" style={cardStyle}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}>
+                    <Image className="card-img-top" src={gympic} alt="Card image cap" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Card title</h5>
+
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        <Button variant="outline-primary">Explore More...</Button>
+                    </div>
+                </div>
+                 <div class="card  me-3" style={cardStyle}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}>
+                    <Image className="card-img-top" src={yogapic} alt="Card image cap" />
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Card title</h5>
+
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        <Button variant="outline-primary">Explore More...</Button>
+                    </div>
+                </div>
+                <div class="card me-3" style={cardStyle}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}>
+                      <Image className="card-img-top" src={yogapic} alt="Card image cap" />
+                    <div class="card-body text-center" >
+                        <h5 class="card-title" >Yoga</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <br/>
+                        <Button variant="outline-primary">Explore More...</Button>
+                    </div>
+                </div>
+            </div>
+
 
             <div className="container services">
                 <h2 className="main-title text-center">SERVICES</h2>

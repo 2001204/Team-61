@@ -1,6 +1,8 @@
 // LoginForm.js
 import React, { useState } from 'react';
 import './LoginForm.css'; // Import your CSS file
+import { Container } from 'react-bootstrap';
+
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
@@ -26,7 +28,13 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="wrapper">
+
+
+
+
+    <Container fluid>
+
+<div className="wrapper">
       <form>
         <h1>Login</h1>
         <div className="input-box">
@@ -71,6 +79,8 @@ const LoginForm = () => {
         </div>
       </form>
     </div>
+    </Container>
+ 
   );
 };
 

@@ -3,7 +3,7 @@ import { Alert, Col, Container, Row } from "react-bootstrap";
 
 export function AboutUs(){
     return(
-        <Container>
+        <Container fluid>
         <Alert variant="primary">
             <h1>About Us</h1>
         </Alert>
