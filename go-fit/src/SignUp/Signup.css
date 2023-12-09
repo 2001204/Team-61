@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* signup.css */
 
 * {
@@ -90,3 +91,97 @@
     text-align: center;
     margin-top: 20px;
 }
+=======
+/* signup.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+     background: url("Men-with-battle-rope-in-functional-training-fitness-gym-.jpg"); 
+    background-size: fixed;
+    background-position: center;
+    background-size: cover;
+    background-color: #333;
+    background-size: contain;
+    background-repeat: no-repeat;
+ }
+
+.wrapper {
+    width: 420px;
+    background: transparent;
+    color: #fff;
+    border-radius: 10px;
+    margin: 70px auto;
+    padding: 30px 40px;
+    border: 2px solid #fff;
+    /* Specify border with a color */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    /* Specify box shadow with a color and transparency */
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    width: 100%;
+    height: 50px;
+    /*background: transparent; */
+    margin: 20px 10px;
+    border-radius: 5px;
+}
+
+.input-box input {
+    width: 130%;
+    height: 100%;
+    background: rgb(56, 53, 53);
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: medium;
+    padding: 10px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.wrapper .remember-forgot a {
+    color: #fff;
+    float: right;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    -ms-flex-align: center;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #34bbed;
+    font-weight: 600;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+>>>>>>> d89969f4f81c52e91ecd65a4a21f3cb04a532461
