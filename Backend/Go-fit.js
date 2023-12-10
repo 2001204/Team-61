@@ -4,7 +4,14 @@ const GofitSchema=new Schema({
     username:String,
     email:String,
     password:String,
-    confirmpassword:String  
+    confirmpassword:String,
+    phone:String,
+    gender: String,
+    age:Number,
+    bloodgroup:String,
+    weight:Number,
+    height:Number
+
 });
 
 export const User=mongoose.model("UserDetail",GofitSchema);

@@ -1,8 +1,12 @@
 import Carousel from 'react-bootstrap/Carousel';
 
-import img3 from "./images/img3.jpg";
-import img4 from "./images/card17.jpg";
-import img5 from "./images/card14.jpg";
+import img3 from "./images/img2.jpg";
+import img6 from "./images/img9.jpg";
+import img4 from "./images/img8.jpg";
+import img5 from "./images/card21.jpg";
+import img1 from "./images/card17.jpg";
+import img11 from "./images/img11.jpg";
+
 
 export function Slider() {
   return (
@@ -14,21 +18,8 @@ export function Slider() {
           alt="First slide"
           height="570px"
         />
-        <Carousel.Caption>
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={img4}
-          alt="First slide"
-          height="630px"
-        />
-        <Carousel.Caption>
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <Carousel.Caption >
+          <h5>Workout</h5>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -39,12 +30,55 @@ export function Slider() {
           height="600px"
         />
         <Carousel.Caption>
-          <h5>Third slide label</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h5>Yoga</h5>
         </Carousel.Caption>
       </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={img6}
+          alt="First slide"
+          height="570px"
+        />
+        <Carousel.Caption>
+         
+        </Carousel.Caption>
+      </Carousel.Item>
+      
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={img4}
+          alt="First slide"
+          height="630px"
+        />
+        <Carousel.Caption>
+          <h5>Gym</h5>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={img1}
+          alt="First slide"
+          height="630px"
+        />
+        <Carousel.Caption>
+          <h5>Second slide label</h5>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={img11}
+          alt="First slide"
+          height="630px"
+        />
+        <Carousel.Caption>
+          <h5>Second slide label</h5>
+        </Carousel.Caption>
+      </Carousel.Item>
+      
     </Carousel>
   );
 }

@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 import card11 from "./images/card11.jpg";
 import card12 from "./images/card12.jpg";
 import card13 from "./images/card13.jpg";
+import PricingTable from "./PricingTable";
 
 export function Programcards() {
   return (
@@ -14,45 +15,36 @@ export function Programcards() {
                 
                     <Card.Img variant="top" src={card11} />
                     <Card.Body>
-                        <Card.Title>Card title</Card.Title>
+                        <Card.Title>WorkOut- physical activity can improve your muscle strength and boost your endurance</Card.Title>
                         <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in
-                            to additional content. This content is a little bit longer.
+                           
                         </Card.Text>
                     </Card.Body>
-                    <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
+        
                 </Card>
 
                 <Card className="me-2">
                     <Card.Img variant="top" src={card12} />
                     <Card.Body>
-                        <Card.Title>Card title</Card.Title>
+                        <Card.Title>Yoga </Card.Title>
                         <Card.Text>
-                            This card has supporting text below as a natural lead-in to
-                            additional content.{' '}
+                        -Yoga improves strength, balance and flexibility.It uses physical postures, breathing exercises, and meditation to improve overall health.
                         </Card.Text>
                     </Card.Body>
-                    <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
+            
                 </Card>
                 <Card className="me-2">
                     <Card.Img variant="top" src={card13} />
                     <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This is a wider card with supporting text below as a natural lead-in
-                            to additional content. This card has even longer content than the
-                            first to show that equal height action.
+                        <Card.Title>Meditation </Card.Title>
+                        <Card.Text>- Excellence to Godliness It's about training in awareness and getting a healthy sense of perspective.
+                        
                         </Card.Text>
                     </Card.Body>
-                    <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
-                    </Card.Footer>
+                    
                 </Card>
             </CardGroup>
+            <PricingTable></PricingTable>
     </Container>
   );
 }

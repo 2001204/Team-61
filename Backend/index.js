@@ -24,7 +24,9 @@ const connectDb = async () => {
     }
 }
 
-//api insert user data (sign up )
+
+
+//api for insert user data (sign up )
 app.post("/User", async (request, response) => {
     try {
         const reqData = request.body;
@@ -40,8 +42,8 @@ app.post("/User", async (request, response) => {
 });
 
 
-// Your other route handlers and middleware...
 
+// login API(it check given crediential from database compare and do login)
 app.post("/User/login", async (request, response) => {
     try {
         const user = await User.findOne({ email: request.body.email });
@@ -68,6 +70,42 @@ app.post("/User/login", async (request, response) => {
 });
 
 
+
+//  //api for update user details
+app.put("/User/:email", async (request, response) => {
+    try {
+        const { email } = request.params;
+        const updatedUserData = request.body;
+
+        // Update the user data, including hashing the password if provided
+        if (updatedUserData.password) {
+            updatedUserData.password = bcrypt.hashSync(updatedUserData.password, 10);
+        }
+        const result = await User.updateOne({ email }, updatedUserData);
+
+        // if (result.nModified === 0) {
+        //     return response.status(StatusCodes.NOT_FOUND).send({ message: STUDENT_NOT_FOUND });
+        // }
+
+        response.send({ message: UPDATE_SUCCESS });
+    } catch (error) {
+        console.error("Error updating user:", error);
+        response.status(StatusCodes.INTERNAL_SERVER_ERROR).send({ message: ERROR_MESSAGE });
+    }
+});
+
+
+//api for delete user
+app.delete("/User/:email", async (request, response) => {
+    try {
+        await User.deleteOne({ email: request.params.email });
+        response.send({ message: DELETE_SUCCESS });
+    } catch (error) {
+        response.status(StatusCodes.INTERNAL_SERVER_ERROR).send({ message: ERROR_MESSAGE });
+    }
+});
+
+
 //getting data of all the user
 app.get("/User", async (request, response) => {
     try {
@@ -77,6 +115,8 @@ app.get("/User", async (request, response) => {
         response.send({ message: "Something went wrong" });
     }
 });
+
+
 
 
 //getting data of one the User
@@ -94,34 +134,6 @@ app.get("/User/:email", async (request, response) => {
         response.send({ message: "User Not Found" });
         console.log("User not findout");
         //response.status(StatusCodes.INTERNAL_SERVER_ERROR).send({message:ERROR_MESSAGE});
-    }
-});
-
-
-//api for delete user
-app.delete("/User/:email", async (request, response) => {
-    try {
-        await User.deleteOne({ email: request.params.email });
-        response.send({ message: DELETE_SUCCESS });
-    } catch (error) {
-        response.status(StatusCodes.INTERNAL_SERVER_ERROR).send({ message: ERROR_MESSAGE });
-    }
-});
-
-
-//api for update user details
-app.put("/User/:email", async (request, response) => {
-    try {
-        await User.updateOne({ email: request.params.email }, request.body);     // Find the user by email
-        if (!User) {
-            return response.status(StatusCodes.NOT_FOUND).send({ message: STUDENT_NOT_FOUND });
-        }
-        // Update the user data
-        User.set(request.body);
-        await User.save();
-        response.send({ message: UPDATE_SUCCESS });
-    } catch (error) {
-        response.status(StatusCodes.INTERNAL_SERVER_ERROR).send({ message: ERROR_MESSAGE });
     }
 });
 

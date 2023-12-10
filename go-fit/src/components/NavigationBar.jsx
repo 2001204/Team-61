@@ -47,10 +47,10 @@ export function NavigationBar() {
                          <LinkContainer to="/login">
                             <Nav.Link><Button >Login</Button></Nav.Link>
                         </LinkContainer>
-
+{/* 
                         <LinkContainer to="/login/dashboard">
                             <Nav.Link><Button>Dashbord</Button></Nav.Link>
-                        </LinkContainer>
+                        </LinkContainer> */}
 
                         {/* <DropdownButton id="dropdown-basic-button" title="DashBoard">
                                 <Dropdown.Item ><LinkContainer to="/dashboard/signup">
@@ -64,22 +64,13 @@ export function NavigationBar() {
                                 
                             </DropdownButton> */}
 
-                       
-
-
-
                     </Nav>
                     <img src={img6}
                         width="60"
                         height="50"
                         className="d-inline-block align-top"
                         roundedCircle />
-
-
-
                 </Navbar.Collapse>
-
-
             </Container>
         </Navbar>
     

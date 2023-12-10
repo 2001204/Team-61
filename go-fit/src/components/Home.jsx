@@ -15,6 +15,7 @@ import img5 from "./images/gif5.gif";
 
 
 
+
 export function Home() {
     let imageStyle = {
         height: "500px",
@@ -27,12 +28,14 @@ export function Home() {
     };
     return (
         <Container fluid>
-             <div style={{ backgroundImage: `url(${background})` }}>
+             {/* <div style={{ backgroundImage: `url(${background})` }}> */}
               
             <div>
                 <Slider></Slider>
             </div><hr />
-           
+
+            <Programcards></Programcards>
+           <br />
 
             <div class="hero" id="about">
            <div class="hero-description">
@@ -41,28 +44,18 @@ export function Home() {
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, impedit quo. Officia nisi corrupti iste asperiores accusamus quisquam quod perspiciatis vitae? Esse eum molestiae ab quasi omnis quidem officia eaque.
               </p>
-              <span class="w3-text-white social" >
-                <p >Follow us on Social media</p>
-                <div class="w3-margin-top">
-             <a href="#">  <i class="fa fa-facebook-official w3-hover-opacity icons" ></i></a> 
-             <a href="#"><i class="fa fa-instagram w3-hover-opacity icons" ></i></a> 
-             <a href="#"><i class="fa fa-snapchat w3-hover-opacity icons"></i></a>  
-             <a href="#"><i class="fa fa-pinterest-p w3-hover-opacity icons" ></i></a>  
-             <a href="#"><i class="fa fa-twitter w3-hover-opacity icons"></i></a>  
-             <a href="#"><i class="fa fa-linkedin w3-hover-opacity icons"></i></a>  
-             </div>
-              </span>
              </div>
            </div>
          </div>
 
-
             <div>
                 <Row>
-                <img src={img1} fluid height={500} width={500}/>;
+                <img src={img1} fluid />;
                 <img src={img3} fluid />;
                 </Row>
             </div>
+            
+
             {/*             
             <div>
                 <div class="image" style={imageStyle}>
@@ -71,9 +64,9 @@ export function Home() {
                 </div>
             </div>
             */}
+            
+        {/* </div> */}
 
- <Programcards></Programcards>
- </div>
         </Container>
     );
 }
