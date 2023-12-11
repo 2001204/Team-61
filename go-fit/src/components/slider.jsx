@@ -41,10 +41,10 @@ export function Slider() {
           height="570px"
         />
         <Carousel.Caption>
-         
+
         </Carousel.Caption>
       </Carousel.Item>
-      
+
       <Carousel.Item>
         <img
           className="d-block w-100"
@@ -78,7 +78,7 @@ export function Slider() {
           <h5>Second slide label</h5>
         </Carousel.Caption>
       </Carousel.Item>
-      
+
     </Carousel>
   );
 }

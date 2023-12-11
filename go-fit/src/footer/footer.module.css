@@ -1,134 +1,65 @@
-.footer {
-  background-color:rgb(64, 64, 64);
-  color: var(--four);
-  /* background-image: url(./images/img7.jpg); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom: -100px;
+
+
+.greyBackground {
+  background-color: #8a8a8a; /* Use the desired shade of grey */
 }
 
-.footer_image {
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer_image h2,
-.footer_image a {
-  color: var(--white);
-}
-
-.footer_image a {
-  margin-left: 10px;
-  text-decoration: underline;
-}
-
-.footer_content {
-  padding: 50px 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 40px;
-}
-
-.footer_content > div {
+.container {
   padding: 20px;
-  color: rgb(220, 224, 11);
+  background-color: #f06a6a;
 }
 
-.footer_content > div:first-of-type img {
-  width: 30px;
-  color: rgb(35, 140, 232);
-}
-
-.logo_holder {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--white);
-}
-
-.footer_content > div:first-of-type > p {
-  margin: 20px 0;
-  color: rgb(6, 132, 242);
-}
-
+/* Info Styles */
 .info {
-  padding: 10px;
-  border: 1px solid var(--four);
-  background-color: var(--five);
+  text-align: center;
 }
 
-.footbkg{
-  background-color: rgb(248, 207, 153);
+.footer-content {
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(224, 189, 189);
 }
 
-.info span {
-  color: white;
-  display: block;
-  margin: 10px 0;
+.footer-content h4 {
+  font-weight: bold;
+  color: #ddd;
+  background-color: #ccc;
 }
 
-.footer_content > div:nth-child(2) ul li {
-  cursor: pointer;
-  margin-bottom: 20px;
-  color: white;
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
-.footer_content > div:nth-child(2) ul li:first-of-type {
-  color: white;
-  cursor: none;
-}
-
-.footer_content > div:nth-child(2) ul li:hover {
-  color: white
-}
-
-.footer_content > div:last-of-type h3 {
-  color: white
-}
-
-.footer_content > div:last-of-type input {
-  display: block;
-  margin: 20px 0;
-  padding: 10px;
-  background-color: var(--five);
-  border: none;
-  outline: none;
-  color: aliceblue;
-}
-
-.footer_content > div:last-of-type button {
-  background-color: yellow;
-  margin-bottom: 20px;
-}
-
-.footer_content > div:last-of-type button:hover {
-  color: var(--white);
-}
-
-.footer_content > div:last-of-type button::before {
-  background-color: var(--three);
-}
-
-.footer_icons i {
-  font-size: 20px;
-  color: var(--white);
-}
-
-.footer_icons i:first-of-type {
+.social-media img {
   margin-right: 10px;
 }
 
-.footer_icons i:hover {
-  color: var(--four);
+.get-updates input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
 }
 
-@media (max-width: 380px) {
-  .footer_content {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
+.get-updates button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
+.copy-right hr {
+  border-color: #fefcfc;
+}
+
+h3, b {
+  color: #fffdfd;
+}
+
+a{
+  color: rgb(120, 195, 249);
 }

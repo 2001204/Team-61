@@ -1,27 +1,25 @@
-
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 
-/* Define your color variables */
-:root {
-  --yellow: #f6f792;
-  --black: #333745;
-  --blue: #77c4d3;
-  --lightBlue: #daede2;
-  --red: #ea2e49;
-  --white: #fff;
-}
 
 /* Apply the rest of your converted CSS code */
 .pricing-table {
-  position: absolute;
+  background: #ea2e49;
+  position:relative;
    top: 200%;
   left: 50%; 
   transform: translate(-50%, -50%);
   display: flex;
   background: transparent;
+  display: flex;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  height: 50vh; 
+  
+  font-weight: bolder;
 }
 
 .card {
+  background: #ea2e49;
   width: 220px;
   height: 370px;
   padding: 30px;
@@ -33,17 +31,21 @@
   overflow: hidden;
   box-shadow: 2px 2px 46px -4px rgba(0, 0, 0, 0.6);
   transition: all 0.2s ease-in-out;
+  
 }
 
 .first-table {
-  background: linear-gradient(to left, #91eae4, #86a8e7, #7f7fd5);
+  
 
   .price::before {
-    content: "$20";
+    content: "$0";
   }
 
   .price {
     font-size: 6rem;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
   }
 
   .buy-button {
@@ -63,7 +65,7 @@
   z-index: 2;
   width: 250px;
   height: 400px;
-  background: linear-gradient(to right, #ff4b2b, #ff416c);
+ 
 
   .price::before {
     content: "$50";
@@ -71,7 +73,7 @@
 }
 
 .third-table {
-  background: linear-gradient(to right, #96c93d, #00b09b);
+ 
 
   .price::before {
     content: "$100";

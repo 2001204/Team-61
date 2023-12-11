@@ -6,25 +6,57 @@ import { User } from './Go-fit.js';
 import { DELETE_SUCCESS, ERROR_MESSAGE, USER_NOT_FOUND, UPDATE_SUCCESS } from './constants.js'
 import { StatusCodes } from 'http-status-codes';
 import jwt from 'jsonwebtoken';
+import { Contact } from './ContactusMsg.js';
+
+
+// secure api -> will check for token in the request
+// if token found and is valid then proceed to perform api execution
+// if token not found or if not valid respond with error message
+
+// token will be an object that can carry certain information into it
+// token should be encrypted
+
+// JWT JSON Web Token is the actual token
+
+
+//to verify token
+// function verifyToken(request,response,next){
+//     const header=request.get('Authorization');   //header->authorization, get function used to get data from http request header
+//     if (header) {
+//         const token=header.split(" ")[1];      //for to get token fron bearer gdgdfwhihvshvssj,  after space
+//         jwt.verify(token,"dipak123",(error,payload)=>{
+//             if (error) {
+//                 response.status(StatusCodes.UNAUTHORIZED).send({message:"Invalid token"});  
+//             }
+//             else{
+//                 next();   //if token verify then send to next
+//             }
+//         });
+//     } else {
+//         response.status(StatusCodes.UNAUTHORIZED).send({message:"Please login first"});      //if user not exist
+//     }
+// }
+
+
 
 
 const app = express();
+
 app.use(cors());
 
 
 app.use(express.json());   //process our request body (parse the JSON object into server)
-
 // The app.use(express.json()) middleware is used in a Node.js application with the Express framework to parse incoming requests with JSON payloads. When a client sends data to the server with a Content-Type: application/json header, this middleware automatically parses the JSON data and makes it available in the request.body property.
+
+//connecting to databse
 const connectDb = async () => {
     try {
-        await mongoose.connect('mongodb://127.0.0.1:27017/Go-fit');   //, { useNewUrlParser: true, useUnifiedTopology: true }
+        await mongoose.connect('mongodb://127.0.0.1:27017/Go-fit');  
         console.log("Database connection created!");
     } catch (error) {
         console.error(error);
     }
 }
-
-
 
 //api for insert user data (sign up )
 app.post("/User", async (request, response) => {
@@ -40,7 +72,6 @@ app.post("/User", async (request, response) => {
         response.status(500).send({ message: "Something Went wrong" });
     }
 });
-
 
 
 // login API(it check given crediential from database compare and do login)
@@ -71,22 +102,16 @@ app.post("/User/login", async (request, response) => {
 
 
 
-//  //api for update user details
+// api for update user details
 app.put("/User/:email", async (request, response) => {
     try {
         const { email } = request.params;
         const updatedUserData = request.body;
 
-        // Update the user data, including hashing the password if provided
-        if (updatedUserData.password) {
+        if (updatedUserData.password) {    // Update the user data, including hashing the password if provided
             updatedUserData.password = bcrypt.hashSync(updatedUserData.password, 10);
         }
         const result = await User.updateOne({ email }, updatedUserData);
-
-        // if (result.nModified === 0) {
-        //     return response.status(StatusCodes.NOT_FOUND).send({ message: STUDENT_NOT_FOUND });
-        // }
-
         response.send({ message: UPDATE_SUCCESS });
     } catch (error) {
         console.error("Error updating user:", error);
@@ -117,8 +142,6 @@ app.get("/User", async (request, response) => {
 });
 
 
-
-
 //getting data of one the User
 app.get("/User/:email", async (request, response) => {
     try {
@@ -126,7 +149,6 @@ app.get("/User/:email", async (request, response) => {
         if (user == null) {
             response.status(StatusCodes.NOT_FOUND).send({ message: USER_NOT_FOUND });
         }
-
         else {
             response.send({ user: user });
         }
@@ -138,13 +160,25 @@ app.get("/User/:email", async (request, response) => {
 });
 
 
+app.post("/ContactUs", async (request, response) => {
+    try {
+        const reqData = request.body;
+        const user = new Contact(reqData);
+        await user.save();
+        response.send({ message: "Submmited" });
+    } catch (error) {
+        console.error(error);
+        response.status(500).send({ message: "Something Went wrong" });
+    }
+});
+
+
+
 //Server listen here on given port no
 app.listen(4200, () => {
     console.log("Server has started on 4200");
     connectDb();
 });
-
-
 
 
 

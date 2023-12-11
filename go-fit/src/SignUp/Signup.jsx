@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { saveUser } from '../service/userservice';
 import './Signup.css';
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import background from "../components/images/card14.jpg";
 
 
 const Signup = () => {
@@ -71,9 +73,11 @@ const Signup = () => {
   };
 
   return (
+    <div className="hero"> 
     <Container className="mb-5 mt-5" fluid>
-      <div className="wrapper">
-        <Form onSubmit={handleSubmit}>
+     
+      <div className="wrapper" >
+        <Form onSubmit={handleSubmit} id="form">
           <h1>Sign Up</h1>
           <Form.Group className="mb-3">
             <Form.Control
@@ -124,13 +128,15 @@ const Signup = () => {
           </Button>
 
           <div className="register-link">
-            <p>
-              Already have an account? <a href="#">Login</a>
-            </p>
-          </div>
+      <p >
+        Already have an account? <Link to="/login">Login</Link>
+      </p>
+    </div>
         </Form>
       </div>
+      
     </Container>
+    </div>
   );
 };
 

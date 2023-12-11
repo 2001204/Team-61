@@ -1,38 +1,15 @@
 
 /* signup.css */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
- body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh;
-     background: url("Men-with-battle-rope-in-functional-training-fitness-gym-.jpg"); 
-    background-size: fixed;
-    background-position: center;
-    background-size: cover;
-    background-color: #333;
-    background-size: contain;
-    background-repeat: no-repeat;
- }
-
 .wrapper {
     width: 420px;
-    background: transparent;
-    color: #fff;
+    background: linear-gradient(rgb(114, 110, 110), rgb(229, 220, 220));
+    color: #e81f1f;
     border-radius: 10px;
     margin: 70px auto;
     padding: 30px 40px;
-    border: 2px solid #fff;
-    /* Specify border with a color */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    /* Specify box shadow with a color and transparency */
+    border: 2px solid #171111;
+    box-shadow: 0 0 10px rgba(152, 117, 117, 0.5);
 }
 
 .wrapper h1 {
@@ -48,35 +25,10 @@
     border-radius: 5px;
 }
 
-.input-box input {
-    width: 130%;
-    height: 100%;
-    background: rgb(56, 53, 53);
-    border: none;
-    outline: none;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
-    font-size: medium;
-    padding: 10px;
-}
-
-.input-box input::placeholder {
-    color: #fff;
-}
-
-.wrapper .remember-forgot a {
-    color: #fff;
-    float: right;
-}
-
-.remember-forgot a:hover {
-    text-decoration: underline;
-}
-
 .wrapper .btn {
-    width: 100%;
+    width: 120%;
     height: 45px;
-    background: #fff;
+    background: #d049b7;
     border: none;
     -ms-flex-align: center;
     border-radius: 40px;
@@ -86,8 +38,18 @@
     font-weight: 600;
 }
 
-.wrapper .register-link {
-    font-size: 14.5px;
-    text-align: center;
-    margin-top: 20px;
+#form{
+    margin-left: 45px;
+    margin-top: 40px;
 }
+
+.hero{
+    height: 650px;
+    margin-top: -40px;
+     background-image: url("https://watermark.lovepik.com/photo/20211123/large/lovepik-gym-picture_500868937.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    background-color: #000015; 
+  }
+  

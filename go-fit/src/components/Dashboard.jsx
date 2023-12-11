@@ -1,5 +1,5 @@
-import { Form ,Button,Row,Col} from "react-bootstrap";
-import { Sidebar } from "../subcomponents/Sidebar";
+
+import { Sidebar } from "../Profile/Profile/Sidebar";
 
 export function Dashboard(){
 
