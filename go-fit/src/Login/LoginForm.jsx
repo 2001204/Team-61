@@ -1,4 +1,3 @@
-
 // // LoginForm.js
 import { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
@@ -6,7 +5,6 @@ import { login } from "../service/userservice";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import './LoginForm.css';
-
 
 export function LoginForm() {
     const navigate = useNavigate();
@@ -22,8 +20,10 @@ export function LoginForm() {
         try {
             const result = await login(formData);
             console.log(result);
+            setFormData({  email: '', password:'' });
             localStorage.setItem("token", result.token);
             navigate(`/dashboard/${formData.email}`);
+            
         } catch (error) {
             setLoginError(true);
             setTimeout(() => {
@@ -39,14 +39,14 @@ export function LoginForm() {
                
                 <Col >
                     <Form onSubmit={handleSubmit} id="form">
-                    <h3>Login</h3>
-                        <Form.Group className="mb-3">
-                            <Form.Label>Email</Form.Label>
+                    <h3 className="mb-4"> Login</h3>
+                        <Form.Group className="mb-4">
+                           
                             <Form.Control type="text" placeholder="Enter email" name="email" onChange={handleChange} required />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
+                       
                             <Form.Control type="password" placeholder="Password" name="password" onChange={handleChange} required/>
                         </Form.Group>
 
@@ -56,7 +56,7 @@ export function LoginForm() {
                     </Form>
 
                     <div className="register-link" >
-                        <p>
+                        <p >
                             You don't have an account? <Link to="/signup">Sign Up</Link>
                         </p>
                     </div>

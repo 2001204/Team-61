@@ -73,7 +73,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="hero"> 
+    <div className="shero"> 
     <Container className="mb-5 mt-5" fluid>
      
       <div className="wrapper" >

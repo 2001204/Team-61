@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import {Table, Col, Container, Row } from 'react-bootstrap';
+import {Table, Col, Container, Row, Alert } from 'react-bootstrap';
 import { fetchuserByEmail } from '../../service/userservice';
 import { useParams } from "react-router-dom";
 
@@ -28,10 +28,11 @@ export function Profile()
       <Container>
       <Row>
         <Col>
+        <Alert className="text-center" variant="primary" style={{fontSize:'35px'}}> User Profile</Alert>
           <h2 style={{ color: 'White' }}>User Profile</h2>
           {userDetails.map((user, index) => (
             <div style={{ color: 'black', fontSize: '20px' }} key={index}>
-                 <Table cellPadding={40}>
+                 <Table cellPadding={40} style={{marginLeft:'10%'}}>
 
                  <tr>
                   <td><b>Name         : </b>{user.username}</td>

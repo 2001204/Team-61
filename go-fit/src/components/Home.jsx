@@ -65,7 +65,7 @@ export function Home() {
           </Card>
         </Col>
         <Col lg={3} style={{ textAlign: "center" }}>
-          <Card style={{ width: '18rem' }}>
+          <Card style={{ width: '15rem' }}>
             <Card.Img variant="top" src={img2} />
           </Card>
         </Col>

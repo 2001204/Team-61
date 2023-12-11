@@ -12,23 +12,23 @@ import "./sidebar.css"
 import { Link, useNavigate } from 'react-router-dom';
 
 import profilepic from '../../components/images/profile.png';
+import { logout } from '../../utils/TokenUtils';
 
 export function Sidebar() {
   const [currentPage, setCurrentPage] = useState(null);
   const sidebarWidth = 200; // Set your desired sidebar width
 
-
   const navigate = useNavigate();
 
   const handleLogout = () => {
+    logout();
     navigate('/login');
-  };
 
+  };
 
   const handleButtonClick = (page) => {
     setCurrentPage(page);
   };
-
 
   return (
     <Container fluid >
@@ -59,8 +59,6 @@ export function Sidebar() {
           {currentPage === 'edit' && <Edit />}
           {currentPage === 'programs' && <Programs/>}
           {currentPage === 'CalculateBmi' && <BMI />}
-
-
 
         </Col>
       </Row>

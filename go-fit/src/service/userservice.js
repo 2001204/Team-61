@@ -16,7 +16,6 @@ export async function login(credentials){
     return response.data;
 }
 
-
 //for update users detalis
 export async function updateuser(updatedUser,email){
     try {

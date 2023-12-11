@@ -63,7 +63,7 @@ export function ContactUs() {
                     </Col>
                     <Col md={6}>
                         <a href="https://www.google.com/maps/place/CENTRE+FOR+DEVELOPMENT+OF+ADVANCED+COMPUTING,+Panchawati+Rd,+Mansarovar,+Pashan,+Pune,+Maharashtra+411008/@18.5349721,73.8105031,19z/data=!4m5!3m4!1s0x3bc2bf0e5dca0f97:0xaed6c14da20b1d0f!8m2!3d18.5350147!4d73.8108441?shorturl=1" target="_blank" rel="noopener noreferrer">
-                       <u>Reach us--> </u>  <img
+                       <u>Reach us-- </u>  <img
                                 src={mappic}
                                 alt="Map"
                                 marginTop={30}

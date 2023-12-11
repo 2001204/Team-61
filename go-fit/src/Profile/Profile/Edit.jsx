@@ -80,9 +80,6 @@ export function Edit() {
           <Container style={containerStyle}>
             <Form onSubmit={handleSubmit}>
               <Alert className="text-center" variant="primary"> Update Yout Additional Information</Alert>
-
-              
-             
               <Row>
                 <Col lg={6}>
                   <Form.Group className="mb-3">

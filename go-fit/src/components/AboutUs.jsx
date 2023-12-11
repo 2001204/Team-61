@@ -49,101 +49,61 @@ export function AboutUs() {
             > <h1>Meet Our Team </h1>
             </Alert>
 
-
             <Row >
                 <Col lg={4} style={{ textAlign: "center" }}>
-                    <img
-                        src={Dipak}
-                        alt="Dipak Wani"
-                        style={{ width: '150px', height: '200px' }}
-                    />
-
-                </Col>
-                <Col lg={4} style={{ textAlign: "center" }}>
-
-                    <img
-                        src={Anuja}
-                        alt="Anuja Gupta"
-                        style={{ width: '150px', height: '200px' }}
-                    />             
-                    </Col>
-                <Col lg={4} style={{ textAlign: "center" }}>
-                    <img
-                        src={Yogesh}
-                        alt="Yogesh Patel"
-                        style={{ width: '150px', height: '200px' }}
-                    />              
-                    </Col>
-            </Row>
-
-
-
-
-            <Row >
-                <Col lg={4} style={{ textAlign: "center" }}>
-                    <Card style={{ width: '18rem' }}>
+                    <Card style={{ width: '25rem' }}>
                         <Card.Img variant="top" src={Dipak} />
                         <Card.Body>
                             <Card.Title>Dipak Wani</Card.Title>
                             <Card.Text>
-                                PRN, jh, edcu back, destignation
+                            PRN : 230940520019 <br />
+                                PG-DAC Student, Sep-23 batch <br />
+                                CDAC Mumbai JH 
                             </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
+                            <Button variant="primary"><a href="https://www.linkedin.com/in/dipak-wani-726b2521a/">LinkedIn</a></Button>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col lg={4} style={{ textAlign: "center" }}>
 
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={Dipak} />
+                    <Card style={{ width: '25rem' }}>
+                        <Card.Img variant="top" src={Anuja} />
                         <Card.Body>
-                            <Card.Title>Dipak Wani</Card.Title>
+                            <Card.Title>Anuja Gupta</Card.Title>
                             <Card.Text>
-                                PRN, jh, edcu back, destignation
+                                PRN : 230940320022 <br />
+                                PG-DAC Student, Sep-23 batch <br />
+                                CDAC Mumbai KH 
                             </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
+                            <Button variant="primary"><a href="https://www.linkedin.com/in/anuja-gupta-7b89ba148/">LinkedIn</a></Button>
                         </Card.Body>
                     </Card>
                 </Col>
                 <Col lg={4} style={{ textAlign: "center" }}>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={Dipak} />
+                    <Card style={{ width: '25rem' }}>
+                        <Card.Img variant="top" src={Yogesh} />
                         <Card.Body>
-                            <Card.Title>Dipak Wani</Card.Title>
+                            <Card.Title>Yogesh Patel</Card.Title>
                             <Card.Text>
-                                PRN, jh, edcu back, destignation
+                            PRN : 230940320132 <br />
+                                PG-DAC Student, Sep-23 batch <br />
+                                CDAC Mumbai KH 
                             </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
+                            <Button variant="primary"><a href="https://www.linkedin.com/in/yogesh-patel-8b426b229/">LinkedIn</a></Button>
                         </Card.Body>
                     </Card>
                 </Col>
             </Row>
+
+
             <Row>
                 <Col>
                     <Card>
                         <Card.Header>Quote</Card.Header>
                         <Card.Body>
-                            <blockquote className="blockquote mb-0">
+                            <blockquote className="blockquote mb-5 ">
                                 <p>
-                                    "Alone we can do so little; together we can do so much." – Helen Keller
-                                </p>
-                                <footer className="blockquote-footer">
-                                    Someone famous in <cite title="Source Title">Source Title</cite>
-                                </footer>
-                            </blockquote>
-                        </Card.Body>
-                    </Card>
-
-
-                </Col>
-
-                <Col>
-                    <Card>
-                        <Card.Header>Quote</Card.Header>
-                        <Card.Body>
-                            <blockquote className="blockquote mb-0">
-                                <p>
-                                    "Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results."
+                                    "Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives."
                                 </p>
                                 <footer className="blockquote-footer">
                                     Andrew Carnegie<cite title="Source Title"> </cite>
@@ -151,11 +111,42 @@ export function AboutUs() {
                             </blockquote>
                         </Card.Body>
                     </Card>
-
+                </Col>
+                <Col>
+                    <Card>
+                        <Card.Header>Quote</Card.Header>
+                        <Card.Body>
+                            <blockquote className="blockquote mb-5 ">
+                                <p>
+                                Teamwork is the secret that makes common people achieve uncommon results. - Ifeanyi Enoch Onuoha
+                                </p>
+                                <footer className="blockquote-footer">
+                                Helen Keller <cite title="Source Title"> </cite>
+                                </footer>
+                            </blockquote>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card>
+                        <Card.Header>Quote</Card.Header>
+                        <Card.Body>
+                            <blockquote className="blockquote mb-5 ">
+                                <p>
+                                Teamwork is the secret that makes common people achieve uncommon results. 
+                                </p>
+                                <footer className="blockquote-footer">
+                                - Ifeanyi Enoch Onuoha<cite title="Source Title"> </cite>
+                                </footer>
+                            </blockquote>
+                        </Card.Body>
+                    </Card>
                 </Col>
             </Row>
 
 
+                    
+      
         </Container>
     );
 }

@@ -5,17 +5,16 @@
   justify-content: center;
  
 }
-/* 
-
-
-/* Center the login button */
 .btn {
   display: block;
   margin: 0 auto;
 }
+
 #form{
   margin-left: 2px;
-  margin-top: 40px;
+  margin-top: 50px;
+  margin-right: 95px;
+  text-align: center;
   align-items: center;
 }
 
@@ -45,11 +44,10 @@
   font-weight: 600;
 }
 
-
 .hero{
-  height: 650px;
-  margin-top: -40px;
-   background-image: url("https://watermark.lovepik.com/photo/20211123/large/lovepik-gym-picture_500868937.jpg");
+  height:500px;
+  margin-top: -20px;
+   background-image: url("https://png.pngtree.com/background/20230516/original/pngtree-large-room-full-of-equipment-in-a-gym-picture-image_2611111.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position:center;

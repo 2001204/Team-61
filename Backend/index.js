@@ -19,26 +19,23 @@ import { Contact } from './ContactusMsg.js';
 // JWT JSON Web Token is the actual token
 
 
-//to verify token
-// function verifyToken(request,response,next){
-//     const header=request.get('Authorization');   //header->authorization, get function used to get data from http request header
-//     if (header) {
-//         const token=header.split(" ")[1];      //for to get token fron bearer gdgdfwhihvshvssj,  after space
-//         jwt.verify(token,"dipak123",(error,payload)=>{
-//             if (error) {
-//                 response.status(StatusCodes.UNAUTHORIZED).send({message:"Invalid token"});  
-//             }
-//             else{
-//                 next();   //if token verify then send to next
-//             }
-//         });
-//     } else {
-//         response.status(StatusCodes.UNAUTHORIZED).send({message:"Please login first"});      //if user not exist
-//     }
-// }
-
-
-
+// to verify token , to protected particular routes
+function verifyToken(request,response,next){
+    const header=request.get('Authorization');   //header->authorization, get function used to get data from http request header
+    if (header) {
+        const token=header.split(" ")[1];      //for to get token fron bearer gdgdfwhihvshvssj,  after space
+        jwt.verify(token,"dipak123",(error,payload)=>{
+            if (error) {
+                response.status(StatusCodes.UNAUTHORIZED).send({message:"Invalid token"});  
+            }
+            else{
+                next();   //if token verify then send to next
+            }
+        });
+    } else {
+        response.status(StatusCodes.UNAUTHORIZED).send({message:"Please login first"});      //if user not exist
+    }
+}
 
 const app = express();
 
@@ -75,21 +72,21 @@ app.post("/User", async (request, response) => {
 
 
 // login API(it check given crediential from database compare and do login)
-app.post("/User/login", async (request, response) => {
-    try {
-        const user = await User.findOne({ email: request.body.email });
 
+app.post("/User/login", async(request, response) => {
+    try {
+        const user= await User.findOne({ email: request.body.email });
         if (user) {
             if (bcrypt.compareSync(request.body.password, user.password))
              {
-                                // Generate and send a token (uncomment if needed)
+                // Generate and send a token (uncomment if needed)
                 const token=jwt.sign({email:user.email},"dipak123");
                 response.status(StatusCodes.OK).send({ message: "Login successful", token: token });
 
                 // response.status(StatusCodes.OK).send({ message: "Login successful" });
             }
        else {
-            response.status(StatusCodes.BAD_REQUEST).send({ message: "Invalid email or password" });
+            response.status(StatusCodes.BAD_REQUEST).send({ message: "Invalid email or password !" });
         }
     } else {
         response.status(StatusCodes.BAD_REQUEST).send({ message: "Invalid email or password........" });
@@ -101,16 +98,13 @@ app.post("/User/login", async (request, response) => {
 });
 
 
-
 // api for update user details
 app.put("/User/:email", async (request, response) => {
     try {
         const { email } = request.params;
         const updatedUserData = request.body;
 
-        if (updatedUserData.password) {    // Update the user data, including hashing the password if provided
-            updatedUserData.password = bcrypt.hashSync(updatedUserData.password, 10);
-        }
+       
         const result = await User.updateOne({ email }, updatedUserData);
         response.send({ message: UPDATE_SUCCESS });
     } catch (error) {
@@ -119,6 +113,9 @@ app.put("/User/:email", async (request, response) => {
     }
 });
 
+ // if (updatedUserData.password) {    // Update the user data, including hashing the password if provided
+        //     updatedUserData.password = bcrypt.hashSync(updatedUserData.password, 10);
+        // }
 
 //api for delete user
 app.delete("/User/:email", async (request, response) => {
