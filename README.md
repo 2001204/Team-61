@@ -29,17 +29,17 @@
 
 **Creating Server**
 - create new folder
-- download package.json by using *nmp i*
+- download package.json by using *nmp init*
 - next download *npm i express mongoose*   for express and mongodb dependancies
 - create index.js file(all apis methods define here by connecting server to database)
 - and usermodule.js for server data, creating a new schema and stored in new object and that object lastily store in class and which class is import in index.js file
 
 - to run file *node index.js*
+- nmp init
 - npm i bcryptjs
 - npm i  jwtwebtoken
-- npm i
-- npm express 
-- npm mongoose
+- npm i express 
+- npm i mongoose
 
 
 ### Session Management:
