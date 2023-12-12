@@ -2,6 +2,19 @@
 
 ## "Go-Fit": Health and Wellness Hub 
 
+### Frontend:-
+- React js
+- HTML
+- CSS
+
+### Backend:- 
+- Node js
+- Express js
+
+### Database :-
+-MongoDB(mongoose)
+
+
 **react js globally install**
 - npm create-react-app -g
 

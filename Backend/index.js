@@ -15,7 +15,6 @@ import { Contact } from './ContactusMsg.js';
 
 // token will be an object that can carry certain information into it
 // token should be encrypted
-
 // JWT JSON Web Token is the actual token
 
 
@@ -55,6 +54,7 @@ const connectDb = async () => {
     }
 }
 
+
 //api for insert user data (sign up )
 app.post("/User", async (request, response) => {
     try {
@@ -72,7 +72,6 @@ app.post("/User", async (request, response) => {
 
 
 // login API(it check given crediential from database compare and do login)
-
 app.post("/User/login", async(request, response) => {
     try {
         const user= await User.findOne({ email: request.body.email });

@@ -64,7 +64,7 @@ const Footer = () => {
         </Col>
         <Col>
           <div className="p-0" style={{ textAlign: "center" }}> <br />
-            <h3>Get Updates</h3>
+            <h3>Free Fitness Tips</h3>
             <input type="text" placeholder="Enter Your Email" />
             <button>Subscribe</button>
             <div className={styles.footer_icons}>

@@ -1,6 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 
-import img3 from "./images/img2.jpg";
+import img3 from "./images/go-fit.png";
 import img6 from "./images/img9.jpg";
 import img4 from "./images/img8.jpg";
 import img5 from "./images/card21.jpg";
@@ -16,7 +16,7 @@ export function Slider() {
           className="d-block w-100"
           src={img3}
           alt="First slide"
-          height="570px"
+          height="600px"
         />
         <Carousel.Caption >
           <h5>Workout</h5>

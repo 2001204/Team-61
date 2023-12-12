@@ -7,8 +7,11 @@ import { Link } from 'react-router-dom';
 import './LoginForm.css';
 
 export function LoginForm() {
+
     const navigate = useNavigate();
+
     const [formData, setFormData] = useState({ email: "", password: "" });
+
     const [loginError, setLoginError] = useState(false);
 
     const handleChange = (e) => {

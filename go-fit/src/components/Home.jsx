@@ -31,23 +31,18 @@ export function Home() {
       <div>
         <Slider></Slider>
       </div><hr />
-      <div>
-        <Row>
-          <h1 className="hero-title" style={{ color: 'black', fontWeight: 'bold', fontSize: '6rem', textAlign: 'center' }}>
-            Fun, trainer led group classes
-          </h1>
-        </Row>
-      </div>  
 
-      <Programcards></Programcards>   
-         <br /><br />  <br /> <br /> <br /> <br /> <br />  <br /><br /><br />   
 
-            <PricingTable></PricingTable>
+      <Programcards></Programcards>
+      <br /><br />  <br /> <br /> <br /> <br /> <br />  <br /><br /><br />
 
-<div className="hero" id="about">
+      <PricingTable></PricingTable>
+
+
+      <div className="hero" id="about">
         <div className="hero-description">
           <div className="hero-text">
-            <h1 className="hero-title" style={{ color: 'white', fontWeight: 'bold', fontSize: '6rem', textAlign: 'center' }}>
+            <h1 className="hero-title" style={{ color: 'white', fontWeight: 'bold', fontSize: '8rem', textAlign: 'center' }}>
               One membership for all your fitness needs.
             </h1>
             <br />
@@ -56,11 +51,18 @@ export function Home() {
         </div>
       </div>
 
-       
+      <div>
+        <Row>
+          <h1 className="hero-title" style={{ color: 'black', fontWeight: 'bold', fontSize: '6rem', textAlign: 'center' }}>
+            Fun, trainer led group classes
+          </h1>
+        </Row>
+      </div>
+
 
       <Row >
         <Col lg={3} style={{ textAlign: "center" }}>
-          <Card style={{ width: '18rem' }}>
+          <Card style={{ width: '20rem' }}>
             <Card.Img variant="top" src={img1} />
           </Card>
         </Col>
@@ -69,7 +71,7 @@ export function Home() {
             <Card.Img variant="top" src={img2} />
           </Card>
         </Col>
-      
+
         <Col lg={3} style={{ textAlign: "center" }}>
           <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src={img3} />

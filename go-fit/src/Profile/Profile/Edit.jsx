@@ -89,7 +89,7 @@ export function Edit() {
                       value={formData.email}
                       placeholder="Enter email"
                       name="email"
-                      onChange={handleChange}
+                      // onChange={handleChange}  //if this handlechange kepp enable then user has to be login again by using new email.
                       style={{width:"400px"}}
                     />
                   </Form.Group>
@@ -230,7 +230,7 @@ export function Edit() {
 
         <Modal show={showDialog} onHide={closeModalDialog}>
           <Modal.Header closeButton> <Modal.Title>Confirmation</Modal.Title>           </Modal.Header>
-          <Modal.Body>Do you really want to delete student with e-mail {currentuser}?</Modal.Body>
+          <Modal.Body>Do you really want to delete your account with e-mail {currentuser}?</Modal.Body>
           <Modal.Footer>
             <Button variant="success" onClick={() => {
               handleStudentDelete();

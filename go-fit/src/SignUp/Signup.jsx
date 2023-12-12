@@ -60,8 +60,10 @@ const Signup = () => {
       if (checkValidate()) {
         // Implement the saveUser function in your service to send data to the server
         const result = await saveUser(formData);
+
          console.log('Data submitted:', result);
           console.log('Data submitted:', formData);
+          
         setFormData({ username: '', email: '', password: '', confirmpassword: '' });
         alert('Sign in Successful. Please Login Your Account.');
        navigate("/login");

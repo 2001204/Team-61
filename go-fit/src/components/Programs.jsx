@@ -63,7 +63,8 @@ export function Programs() {
                         effective tools to manage stress. If you carefully
                         listen to the instructions of our instructor and do
                         exactly as he says, you will completely forget that you
-                        were ever stressed out in the first place.
+                        were ever stressed out in the first place.<Button variant="outline-primary">
+                          <a href="https://en.wikipedia.org/wiki/Meditation">Explore More!</a></Button>
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -92,7 +93,8 @@ export function Programs() {
                         various types of breath control. It can also be called
                         yoga for relaxation of the mind, body, and soul. In
                         Sanskrit, the word "Prana" means "breath", and "yama"
-                        means "control"
+                        means "control"<Button variant="outline-primary">
+                          <a href="https://en.wikipedia.org/wiki/Yoga">Explore More!</a></Button>
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -120,7 +122,8 @@ export function Programs() {
                         According to the NHS, exercise is a 'miracle cure'.
                         Improved physical health, enhanced mental health, social
                         interaction, increased energy and productivity, and
-                        personal achievement
+                        personal achievement<Button variant="outline-primary">
+                          <a href="https://en.wikipedia.org/wiki/Exercise">Explore More!</a></Button>
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -149,7 +152,8 @@ export function Programs() {
                         contribute to their community. It is an integral
                         component of health and well-being that underpins our
                         individual and collective abilities to make decisions,
-                        build relationships.
+                        build relationships.<Button variant="outline-primary">
+                          <a href="https://en.wikipedia.org/wiki/Mental_health">Explore More!</a></Button>
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -179,7 +183,8 @@ export function Programs() {
                         effective tools to manage stress. If you carefully
                         listen to the instructions of our instructor and do
                         exactly as he says, you will completely forget that you
-                        were ever stressed out in the first place.
+                        were ever stressed out in the first place.<Button variant="outline-primary">
+                          <a href="https://en.wikipedia.org/wiki/Health_care">Explore More!</a></Button>
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -206,7 +211,8 @@ export function Programs() {
                         Exercise is key to living an Anticancer lifestyle. By
                         reducing inflammation and strengthening the immune
                         system, physical activity can lower your risk of cancer,
-                        cancer recurrence, and chronic illness.
+                        cancer recurrence, and chronic illness.<Button variant="outline-primary">
+                          <a href="https://en.wikipedia.org/wiki/Fitness">Explore More!</a></Button>
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -234,7 +240,7 @@ export function Programs() {
                         According to the NHS, exercise is a 'miracle cure'.
                         Improved physical heaalth, enhanced mental health, social
                         interaction, increased energy and productivity, and
-                        personal achievement
+                        personal achievement<Button variant="outline-primary"><a href="https://en.wikipedia.org/wiki/Sport">Explore More!</a></Button>
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -261,7 +267,8 @@ export function Programs() {
                         effective tools to manage stress. If you carefully
                         listen to the instructions of our instructor and do
                         exactly as he says, you will completely forget that you
-                        were ever stressed out in the first place.
+                        were ever stressed out in the first place.<Button variant="outline-primary">
+                          <a href="https://en.wikipedia.org/wiki/Mind">Explore More!</a></Button>
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -291,7 +298,7 @@ export function Programs() {
                         effective tools to manage stress. If you carefully
                         listen to the instructions of our instructor and do
                         exactly as he says, you will completely forget that you
-                        were ever stressed out in the first place.
+                        were ever stressed out in the first place.<Button variant="outline-primary"><a href="">Explore More!</a></Button>
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -320,7 +327,8 @@ export function Programs() {
                         various types of breath control. It can also be called
                         yoga for relaxation of the mind, body, and soul. In
                         Sanskrit, the word "Prana" means "breath", and "yama"
-                        means "control"
+                        means "control"<Button variant="outline-primary">
+                          <a href="https://en.wikipedia.org/wiki/Human_body_weight">Explore More!</a></Button>
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -348,7 +356,8 @@ export function Programs() {
                         According to the NHS, exercise is a 'miracle cure'.
                         Improved physical health, enhanced mental health, social
                         interaction, increased energy and productivity, and
-                        personal achievement
+                        personal achievement<Button variant="outline-primary">
+                          <a href="https://en.wikipedia.org/wiki/Good_Food">Explore More!</a></Button>
                       </Card.Text>
                     </Card.Body>
                   </Card>
@@ -376,7 +385,8 @@ export function Programs() {
                         effective tools to manage stress. If you carefully
                         listen to the instructions of our instructor and do
                         exactly as he says, you will completely forget that you
-                        were ever stressed out in the first place.
+                        were ever stressed out in the first place.<Button variant="outline-primary">
+                          <a href="https://en.wikipedia.org/wiki/Drink">Explore More!</a></Button>
                       </Card.Text>
                     </Card.Body>
                   </Card>
