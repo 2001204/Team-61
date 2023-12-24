@@ -37,10 +37,7 @@ function verifyToken(request,response,next){
 }
 
 const app = express();
-
 app.use(cors());
-
-
 app.use(express.json());   //process our request body (parse the JSON object into server)
 // The app.use(express.json()) middleware is used in a Node.js application with the Express framework to parse incoming requests with JSON payloads. When a client sends data to the server with a Content-Type: application/json header, this middleware automatically parses the JSON data and makes it available in the request.body property.
 
