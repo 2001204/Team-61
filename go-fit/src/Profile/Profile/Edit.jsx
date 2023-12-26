@@ -68,7 +68,7 @@ export function Edit() {
 
     alignItems: 'center',
     justifyContent: 'center',
-    height: '83vh',
+    height: '92vh',
     width: '70%',
     marginTop: '-20px'
   };
